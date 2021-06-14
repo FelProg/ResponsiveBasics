@@ -1,48 +1,57 @@
-/* INSTRUCTIONS
- *
- * 1) Keep the text inside .intro-content
- *    in the same place, but have the background
- *    extend from one side of the viewport
- *    to the other, no matter how wide or narrow
- *    the browser is.
- *
- * 2) Limit the maximum width of the text in the
- *    bottom area.
- *
- * You may modify the HTML if needed
- * (you probably should for this challenge)
- *
- */
-
 * {
-  box-sizing: border-box;
-}
-
-body {
   margin: 0;
-  font-family: sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-.container,
-.container2 {
+header {
   width: 100%;
+  min-height: 656px;
   background: #23424a;
+  padding: 9.25em 7.625em 9.25em 7.625em;
+}
+
+.headerContent {
+  width: 70%;
+  max-width: 710px;
+  min-height: 360px;
   color: white;
-  padding: 3rem 0;
 }
 
-img {
-  width: 100%;
-  /*no height :) */
+.headerH1 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 56.31px;
+  margin-bottom: 0.5em;
 }
 
-.container2 {
-  background-color: white;
-  color: black;
+.headerP {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 31.54px;
+  margin-bottom: 3em;
 }
 
-.intro-content {
-  width: 80%;
-  max-width: 50ch;
-  margin: 0 auto;
+.headerButton,
+.headerButton2 {
+  width: 285px;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 1em;
+  background: #38cfd9;
+  border: none;
+  border-radius: 31.5px;
+  margin-right: 1em;
+}
+
+.headerButton2 {
+  background: #23424a;
+  outline: 1px solid #38cfd9;
+  color: #38cfd9;
+}
+
+.headerButton,
+.headerButton2:hover {
+  cursor: pointer;
 }
