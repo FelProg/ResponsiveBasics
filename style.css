@@ -9,24 +9,29 @@ header {
   width: 100%;
   min-height: 656px;
   background: #23424a;
-  padding: 9.25em 7.625em 9.25em 7.625em;
+  padding: 9.25em 0;
 }
 
 .headerContent {
-  width: 70%;
-  max-width: 710px;
+  width: 80%;
   min-height: 360px;
   color: white;
+  margin: 0 auto;
 }
 
-.headerH1 {
+.info-section {
+  width: 70%;
+  max-width: 710px;
+}
+
+.info-section h1 {
   font-size: 48px;
   font-weight: 900;
   line-height: 56.31px;
   margin-bottom: 0.5em;
 }
 
-.headerP {
+.info-section p {
   font-size: 21px;
   font-weight: 400;
   line-height: 31.54px;
