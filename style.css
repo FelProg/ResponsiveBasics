@@ -1,62 +1,139 @@
-* {
-  margin: 0;
-  padding: 0;
+/* 
+////// For this challenge ///////
+
+- You will have to modify the HTML
+
+- You can add new classes in the HTML
+  if you need to
+
+// Requirements
+1. The headings in the first row must be
+   a different color
+2. The two .col at the bottom must go next
+   to one another
+3. The section at the bottom should have
+   a dark background color and a different
+   color of text
+4. I've removed the "gap" that I created,
+   so you'll have to add it back in
+
+   */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
   font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
 }
 
-header {
-  width: 100%;
-  min-height: 656px;
-  background: #23424a;
-  padding: 9.25em 0;
-}
-
-.headerContent {
-  width: 80%;
-  min-height: 360px;
-  color: white;
-  margin: 0 auto;
-}
-
-.info-section {
-  width: 70%;
-  max-width: 710px;
-}
-
-.info-section h1 {
-  font-size: 48px;
+h1 {
+  font-size: 3rem;
   font-weight: 900;
-  line-height: 56.31px;
-  margin-bottom: 0.5em;
 }
 
-.info-section p {
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 31.54px;
+h2 {
+  font-size: 2.25rem;
+  font-weight: 900;
+}
+
+/*Header*/
+
+.hero {
+  padding: 100px 0;
+  background-color: #23424a;
+  color: #fff;
+}
+
+.hero__text {
+  width: 60%;
+}
+
+.hero p {
   margin-bottom: 3em;
 }
 
-.headerButton,
-.headerButton2 {
-  width: 285px;
-  font-size: 21px;
-  font-weight: bold;
-  padding: 1em;
-  background: #38cfd9;
-  border: none;
-  border-radius: 31.5px;
-  margin-right: 1em;
+.btn,
+.btn2 {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #23424a;
+  font-weight: 900;
+  background-color: #38cfd9;
+  padding: 0.75em 2em;
+  border-radius: 100px;
+  min-width: 210px;
+  text-align: center;
 }
 
-.headerButton2 {
-  background: #23424a;
+.btn2 {
+  background-color: #23424a;
   outline: 1px solid #38cfd9;
   color: #38cfd9;
 }
 
-.headerButton,
-.headerButton2:hover {
-  cursor: pointer;
+a + a {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.75;
+}
+
+/*end Header*/
+
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*section 2*/
+
+.section2,
+.section3 {
+  width: 100%;
+  min-height: 300px;
+  padding: 100px 0;
+}
+
+.row {
+  /* display: flex => flex container */
+  display: flex;
+
+  /* can't use yet */
+  /* gap: 100px; */
+}
+
+.col {
+  /* these are now flex items */
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/*take only the .col's that have a .col on their left side*/
+.col + .col {
+  margin-left: 10px;
+}
+
+.section2 h2 {
+  color: #87629a;
+}
+
+.section3 {
+  background-color: #136c72;
+  color: #fff;
+}
+
+.section3 .container {
+  display: flex;
 }
