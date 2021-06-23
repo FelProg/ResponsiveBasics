@@ -127,8 +127,18 @@ img {
 
   h2 {
     font-size: 2rem;
+    text-align: center;
   }
 
+  p {
+    line-height: 1.81rem;
+  }
+
+  .sec2,
+  .sec3,
+  .sec4 {
+    padding-top: 2rem;
+  }
   .row {
     flex-direction: column;
   }
