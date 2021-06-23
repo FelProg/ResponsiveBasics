@@ -133,6 +133,10 @@ img {
     flex-direction: column;
   }
 
+  .sec2 p {
+    margin-bottom: 1rem;
+  }
+
   .sec4 article {
     flex-direction: column-reverse;
   }
