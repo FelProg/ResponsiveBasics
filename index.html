@@ -2,72 +2,102 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conquering Responsive Layouts</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Layout Practice</title>
   </head>
   <body>
-    <header class="sec1">
-      <div class="info-container">
-        <p>lorem ipsum sit</p>
-        <h1>Responsive layouts don't have to be a struggle</h1>
+    <header>
+      <div class="container row">
+        <button class="nav-toggle" aria-label="open navigation">
+          <span class="hamburger"></span>
+        </button>
+        <a class="logo" href="#">
+          <img src="img/logo.svg" alt="conquering responsive layouts" />
+        </a>
+        <nav class="nav">
+          <ul class="nav__list nav__list--primary">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+          <ul class="nav__list nav__list--secondary">
+            <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--button">Sign up</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <article class="sec2">
-      <div class="info-container">
-        <h2>Queality Designs</h2>
-        <article class="row">
-          <p class="col">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
-            quae fuga minima ex cupiditate eius officia quasi facilis
-            aspernatur, sunt aliquid totam nihil placeat architecto eveniet
-            porro.
+
+    <section class="hero">
+      <div class="container row">
+        <div class="hero__text">
+          <h1>Responsive layouts don’t have to be a struggle</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
           </p>
-          <p class="col">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
-            quae fuga minima ex cupiditate eius officia quasi facilis
-            aspernatur, sunt aliquid totam nihil placeat architecto eveniet
-            porro.
-          </p>
-        </article>
+          <a href="#" class="btn">I want to learn</a>
+        </div>
+        <img
+          src="img/hero-img.jpg"
+          alt="UX design sketches"
+          class="hero__img"
+        />
       </div>
-    </article>
-    <article class="sec3">
-      <div class="info-container">
-        <article class="row">
-          <div class="col">
-            <h2>Made custom for you</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-              porro maxime tempora, dolore laborum rerum asperiores doloribus
-              quidem amet vitae consequuntur libero expedita! Dolorem nulla
-              minima reiciendis possimus? Deleniti, nulla.
-            </p>
-          </div>
-          <div class="col img-cont">
-            <img src="img/image-01.jpg" alt="mountains sunset" />
-          </div>
-        </article>
-      </div>
-    </article>
-    <article class="sec4">
-      <div class="sec4--content info-container">
-        <article class="row">
-          <div class="col img-cont">
-            <img src="img/image-02.jpg" alt="mountains sunset" />
-          </div>
-          <div class="col">
-            <h2>Created with care</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-              porro maxime tempora, dolore laborum rerum asperiores doloribus
-              quidem amet vitae consequuntur libero expedita! Dolorem nulla
-              minima reiciendis possimus? Deleniti, nulla.
-            </p>
-          </div>
-        </article>
-      </div>
-    </article>
+    </section>
+
+    <main class="main container row">
+      <section class="primary-content">
+        <h2 class="section-title">
+          Quality designs made custom, on demand, just for you
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam.
+        </p>
+      </section>
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Cheap</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+
+        <h2 class="sidebar-title">Quick</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+
+        <h2 class="sidebar-title">Quality</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+      </aside>
+    </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
