@@ -1,246 +1,324 @@
-/* Challenge
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap");
 
-   Make the navigation layout work
-   on both mobile and large screens.
-
-   Mobile-first, so mobile styles first,
-   then add the large screen styles
-   inside the existing media query
-
-*/
+:root {
+  --nav-color: #2e323f;
+  --panel-color: #3b4050;
+  --panel2-color: #d2dbdb;
+  --panel3-color: #fff;
+  --brown: #a59678;
+}
 
 *,
-*::before,
-*::after {
+::before,
+::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
+header {
+  background-color: var(--nav-color);
+  padding: 1rem 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
 }
 
-img {
-  max-width: 100%;
+p {
+  font-family: "Montserrat", sans-serif;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-top: 0;
-}
-
-.section-title {
-  color: #87629a;
-}
-
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #23424a;
-  font-weight: 900;
-  background-color: #38cfd9;
-  padding: 0.75em 2em;
-  border-radius: 100px;
-}
-
-.btn:hover,
-.btn:focus {
-  opacity: 0.75;
+h3,
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
 }
 
 .container {
   width: 80%;
-  max-width: 1100px;
   margin: 0 auto;
-  /* added for nav-toggle positioning */
-  position: relative;
 }
 
-header {
-  background: #136c72;
-  padding: 1em 0;
+.row {
+  display: flex;
+}
+
+.nav__links,
+.logo {
+  display: block;
+  position: relative;
   text-align: center;
 }
 
-.nav {
-  width: 100%;
+.list__items {
+  /*ul*/
+  list-style: none;
 }
 
-.nav-toggle {
-  cursor: pointer;
-  border: 0;
-  width: 3em;
-  height: 3em;
-  padding: 0em;
-  border-radius: 50%;
-  background: #072a2d;
+.item {
+  /*li*/
   color: white;
-  transition: opacity 250ms ease;
+  margin: 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
 
+.button__item {
+  background-color: var(--brown);
+  display: inline;
+  padding: 0.4rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.nav__toggle {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  background-color: black; /*burger container*/
+  border-radius: 50%;
   position: absolute;
-  left: 0;
+  left: 10px;
+  padding: 7px;
 }
 
-.nav-toggle:focus,
-.nav-toggle:hover {
-  opacity: 0.75;
-}
-
-.hamburger {
-  width: 50%;
-  position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
+.nav__hamburger,
+.nav__hamburger::before,
+.nav__hamburger::after {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto; /*burger lines together in the center*/
   height: 3px;
   background: white;
+  border-radius: 10px;
 }
 
-.hamburger::before,
-.hamburger::after {
-  content: "";
+.nav__hamburger::before,
+.nav__hamburger::after {
+  content: ""; /*burger reference of existing without characters*/
+}
+
+.nav__hamburger::before {
+  transform: translateY(-6px); /*burger top line*/
+}
+
+.nav__hamburger::after {
+  transform: translateY(3px); /*burger middle line*/
+}
+
+.nav__links--menu {
+  display: none; /*this class is added by js to hide the menu*/
+}
+
+main {
   width: 100%;
+  min-height: 300px;
+  background-color: var(--panel-color);
+  font-family: "Oswald", sans-serif;
+  color: var(--panel3-color);
+  padding: 2rem 0;
 }
 
-.hamburger::before {
-  transform: translateY(-6px);
+.main__flex {
+  flex-direction: column;
+  max-width: 600px;
 }
 
-.hamburger::after {
-  transform: translateY(3px);
+.main__title {
+  font-size: 45px;
+  line-height: 3rem;
+  text-transform: uppercase;
 }
 
-/* made changes here from video
-   to make it more accessible.
-   
-   Works the same :) */
-
-.nav__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.main__title--brown {
+  color: var(--brown);
+}
+.main__content {
+  flex-direction: column;
 }
 
-.nav__list--primary {
+.main__content--txt {
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 1.1rem;
+  padding: 2rem 0;
+}
+
+.main__content--btn {
+  padding: 0.3rem 1rem;
+  background-color: var(--brown);
+  /* display: inline; */
+  width: max-content;
+  border-radius: 50px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.section1 {
+  background-color: var(--panel2-color);
+  width: 100%;
+  min-height: 400px;
+  padding: 1rem 0;
+}
+
+.section1__flex,
+.section2__flex {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.section1__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.section1__item p {
+  font-size: 0.9rem;
+}
+
+.section1__item h3 {
+  font-size: 1.5rem;
+  color: var(--brown);
+}
+
+.section2__left--flex {
+  flex-direction: column;
+}
+
+.section2__left--title {
+  font-size: 1.5rem;
+  color: var(--brown);
+  margin-top: 1rem;
+}
+
+.section2__left--text {
+  font-size: 0.9rem;
   margin: 1rem 0;
 }
 
-.nav__link {
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  font-size: 0.7em;
+.section2__left--img {
+  width: 100%;
+  margin: 1rem 0;
 }
 
-.nav__link--button {
-  background-color: #fff;
-  color: #23424a;
-  padding: 0.25em 0.75em;
-  border-radius: 100px;
+.img__container {
+  max-height: 300px;
+  overflow: hidden;
 }
 
-.nav__item {
-  margin-bottom: 0.8rem;
+.section2__right--flex {
+  flex-direction: column;
 }
 
-.nav__item:hover,
-.nav__item:focus {
-  opacity: 0.6;
-}
-
-.nav {
-  visibility: hidden;
-  height: 0;
-  position: absolute;
-}
-
-.nav--visible {
-  visibility: visible;
-  height: auto;
-  position: relative;
-}
-
-.logo {
-  height: 30px;
-}
-
-.hero {
-  padding: 100px 0;
-  background-color: #23424a;
-  color: #fff;
-}
-
-.hero__img {
-  margin-top: 2em;
-}
-
-.hero p {
-  margin-bottom: 3em;
-}
-
-.main {
-  margin-top: 3em;
-}
-
-.sidebar {
-  padding: 1em;
+.section2__right--card {
+  background-color: var(--panel-color);
+  color: var(--panel3-color);
   text-align: center;
-  color: #fff;
-  background-color: #136c72;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-@media (min-width: 800px) {
-  .nav-toggle {
-    display: none;
+.section2__right--card--title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section2__right--card--text {
+  font-size: 0.9rem;
+}
+
+footer {
+  width: 100%;
+  min-height: 400px;
+  background-color: var(--panel-color);
+  color: var(--panel3-color);
+  padding-bottom: 2rem;
+}
+
+.footer__flex {
+  flex-direction: column;
+}
+
+.footer__title {
+  font-size: 2rem;
+  line-height: 1.8rem;
+  margin: 2rem 0;
+}
+
+.footer__info--flex {
+  flex-direction: column;
+}
+
+.footer__info--title,
+.footer__about--title {
+  color: var(--brown);
+  margin-bottom: 0.5rem;
+}
+
+.footer__about--title {
+  font-size: 1.5rem;
+}
+
+.footer__about--text {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer__info--items {
+  list-style: none;
+}
+
+.footer__info--item {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+@media (min-width: 600px) {
+  .section1 {
+    min-height: 300px;
   }
 
-  .nav {
-    visibility: visible;
-    display: flex;
-    justify-content: flex-end;
-    height: auto;
-    position: relative;
+  .section1__flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: inherit;
   }
 
-  .nav__list {
-    margin: 0;
-    display: flex;
+  .section1__item {
+    text-align: center;
+    max-width: 221px;
   }
 
-  .nav__item {
-    margin: 0 0 0 1em;
+  .section1__item + .section1__item {
+    margin-left: 1rem;
   }
 
-  .row {
-    display: flex;
+  .section2__right--card {
+    max-width: 221px;
+  }
+
+  .section2__right--flex {
+    flex-direction: row;
     justify-content: space-between;
   }
 
-  .hero__text {
-    width: 62%;
+  .section2__right--card + .section2__right--card {
+    margin-left: 1rem;
   }
 
-  .hero__img {
-    width: 32%;
-    align-self: flex-start;
-    margin: 0;
+  .footer {
+    text-align: center;
   }
 
-  .primary-content {
-    width: 62%;
+  .footer__info--list--section {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 1.5rem;
   }
+}
 
-  .sidebar {
-    width: 32%;
-  }
-
-  .nav__list--primary {
-    margin: 0 auto;
+@media (min-width: 900px) {
+  body {
+    display: none;
   }
 }

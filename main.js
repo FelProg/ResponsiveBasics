@@ -1,12 +1,6 @@
-const navToggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector(".nav");
+const nav = document.querySelector(".nav__toggle");
+const listOfLinks = document.querySelector(".nav__links");
 
-navToggle.addEventListener("click", () => {
-  nav.classList.toggle("nav--visible");
+nav.addEventListener("click", () => {
+  listOfLinks.classList.toggle("nav__links--menu");
 });
-
-window.onresize = () => {
-  if (window.innerWidth >= 800) nav.classList.remove("nav--visible");
-};
-
-// window.onresize = CollapseMenu;
